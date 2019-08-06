@@ -1,5 +1,7 @@
 package com.study.chapter1;
 
+import com.study.utils.Utils;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -29,25 +31,25 @@ public class BinarySearch {
         }
         return -1;
     }
-
-    /**
-     * 获取一个不重复的随机数组
-     * @param size 数组的大小
-     * @param range 随机数的范围 如传100则是0～99
-     * @return
-     */
-    public static int[] getRandomNumbers(int size, int range){
-        Random r = new Random();
-        int numbers[] = new int[size];
-        boolean[] bool = new boolean[range];
-        for (int i = 0; i < size; i++) {
-            do{
-                numbers[i] = r.nextInt(range);
-            }while (bool[numbers[i]]);
-            bool[numbers[i]] = true;
-        }
-        return numbers;
-    }
+//
+//    /**
+//     * 获取一个不重复的随机数组
+//     * @param size 数组的大小
+//     * @param range 随机数的范围 如传100则是0～99
+//     * @return
+//     */
+//    public static int[] getRandomNumbers(int size, int range){
+//        Random r = new Random();
+//        int numbers[] = new int[size];
+//        boolean[] bool = new boolean[range];
+//        for (int i = 0; i < size; i++) {
+//            do{
+//                numbers[i] = r.nextInt(range);
+//            }while (bool[numbers[i]]);
+//            bool[numbers[i]] = true;
+//        }
+//        return numbers;
+//    }
 
     /**
      * 展示数组
@@ -61,7 +63,7 @@ public class BinarySearch {
     //二分法测试
     public static void main(String[] args) {
         //随机生成20个100以内的数
-        int[] numbers = getRandomNumbers(20,100);
+        int[] numbers = Utils.getRandomNumbers(20,100);
         //展示随机生成的数组
         showArray(numbers,"随机生成的20个100以内的数组：");
         //数组排序
