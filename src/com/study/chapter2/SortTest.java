@@ -11,7 +11,8 @@ public class SortTest {
 
 //        SelectionSort st = new SelectionSort(); //选择排序
 //        InsertionSort st = new InsertionSort(); //插入排序
-        MergeSort st = new MergeSort();         //归并排序
+//        MergeSort st = new MergeSort();         //归并排序
+        QuickSort st = new QuickSort();         //快速排序
 //        ShellSort st = new ShellSort(); //希尔排序
 //        st.sort1(array); //插入排序1
         st.showArray(array,"排序前的数组：");
