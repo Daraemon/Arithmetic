@@ -26,8 +26,7 @@ public class QuickSort extends SortBase {
      */
     private static int partition(Comparable[] a, int lo, int hi){
         Comparable v = a[lo];   //切分的元素
-        int i = lo;
-        int j = hi+1;
+        int i = lo, j = hi + 1; //左右指针
         while(true){
             while(less(a[++i],v)) if(i >= hi) break;    //从左往右扫描选出比v大的元素
             while(less(v,a[--j])) if(j <= lo) break;    //从右往左扫描选出比v小的元素
